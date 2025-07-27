@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "displayName": "Only-CanadaCentral",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Denies any resource that is not being deployed in the Canada Central region.",
+    "metadata": {
+      "createdBy": "0f50862e-8e57-485a-acf3-03852b054b23",
+      "createdOn": "2025-07-27T19:55:31.5571184Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "version": "1.0.0",
+    "parameters": {
+      "allowedLocations": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Only-CanadaCentral",
+          "description": "Denies any resource that is not being deployed in the Canada Central region.",
+          "strongType": "location"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "not": {
+          "field": "location",
+          "in": "[parameters('allowedLocations')]"
+        }
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/subscriptions/3b36c431-a92e-4ac8-927b-17a0f4b30054/providers/Microsoft.Authorization/policyDefinitions/43dc0e70-95e1-4b02-8feb-cb3f124e387c",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "43dc0e70-95e1-4b02-8feb-cb3f124e387c",
+  "systemData": {
+    "createdBy": "balc0022@algonquinlive.com",
+    "createdByType": "User",
+    "createdAt": "2025-07-27T19:55:31.5355403Z",
+    "lastModifiedBy": "balc0022@algonquinlive.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2025-07-27T19:55:31.5355403Z"
+  }
+}
