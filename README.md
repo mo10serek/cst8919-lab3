@@ -17,3 +17,7 @@ First, we need to set up a policy that a resource is only available in Central C
 ## Challenges and lessons learned
 
 The lesson I leaned in this lab is making polices in json format, make an initiative and group each policy together, and also assigning an initiative to a group. 
+
+## Demo
+
+[demo](https://youtu.be/5fDaapAJCRc)
